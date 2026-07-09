@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Calendar, Code } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import { Github } from './BrandIcons';
 import './Projects.css';
 

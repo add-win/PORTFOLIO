@@ -2,7 +2,7 @@ import React from 'react';
 import { GraduationCap, MapPin, Award, Calendar, BookOpen } from 'lucide-react';
 import './About.css';
 
-const About = ({ education, personal }) => {
+const About = ({ education }) => {
   return (
     <section id="about" className="about-section section">
       <h2 className="section-title">About Me</h2>

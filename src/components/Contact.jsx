@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Code, MapPin, Send, CheckCircle2 } from 'lucide-react';
-import { Github, Linkedin } from './BrandIcons';
+import { Linkedin } from './BrandIcons';
 import './Contact.css';
 
 const Contact = ({ personal }) => {

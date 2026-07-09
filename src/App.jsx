@@ -57,7 +57,7 @@ function App() {
       
       <main style={{ marginTop: '80px' }}>
         <Hero personal={portfolioData.personal} />
-        <About education={portfolioData.education} personal={portfolioData.personal} />
+        <About education={portfolioData.education} />
         <Skills skills={portfolioData.skills} />
         <Projects projects={portfolioData.projects} />
         <Achievements achievements={portfolioData.achievements} certifications={portfolioData.certifications} />

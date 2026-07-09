@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, Award, Landmark, Flame, UserCheck, CheckCircle2, AwardIcon } from 'lucide-react';
+import { Trophy, Award, Landmark, Flame, UserCheck, CheckCircle2 } from 'lucide-react';
 import './Achievements.css';
 
 const Achievements = ({ achievements, certifications }) => {
