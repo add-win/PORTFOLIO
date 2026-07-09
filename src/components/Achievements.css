@@ -1,0 +1,119 @@
+.achievements-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.column-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.column-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+.achievements-list, .certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.achievement-card, .certification-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.ach-icon-wrapper {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ach-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.ach-icon.gold { color: #eab308; }
+.ach-icon.orange { color: #f97316; }
+.ach-icon.blue { color: #3b82f6; }
+.ach-icon.green { color: #10b981; }
+.ach-icon.purple { color: #a855f7; }
+
+.ach-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ach-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.ach-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Certifications styles */
+.cert-status-wrapper {
+  background-color: var(--primary-light);
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.cert-status-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--primary);
+}
+
+.cert-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cert-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.cert-issuer {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 968px) {
+  .achievements-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
