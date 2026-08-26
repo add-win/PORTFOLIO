@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Mail, Code, MapPin, Send, CheckCircle2 } from 'lucide-react';
-import { Linkedin } from './BrandIcons';
+import { Mail, Code, MapPin, Send, CheckCircle2, Phone, Globe } from 'lucide-react';
+import { Linkedin, Github } from './BrandIcons';
 import './Contact.css';
 
 const Contact = ({ personal }) => {
@@ -19,11 +19,9 @@ const Contact = ({ personal }) => {
     // Simulate API request or trigger mailto
     const mailtoLink = `mailto:${personal.email}?subject=${encodeURIComponent(formData.subject || 'Portfolio Inquiry')}&body=${encodeURIComponent(`Hi Addwin,\n\n${formData.message}\n\nBest regards,\n${formData.name}\n${formData.email}`)}`;
     
-    // Open in new tab or trigger email app
     window.location.href = mailtoLink;
     setIsSubmitted(true);
 
-    // Reset form after a small delay
     setTimeout(() => {
       setFormData({ name: '', email: '', subject: '', message: '' });
       setIsSubmitted(false);
@@ -34,7 +32,7 @@ const Contact = ({ personal }) => {
     <section id="contact" className="contact-section section">
       <h2 className="section-title">Get in Touch</h2>
       <p className="contact-subtitle">
-        Have an internship opportunity, a project idea, or just want to connect? Drop a message!
+        Have an internship opportunity, project collaboration, or tech discussion? Feel free to reach out!
       </p>
 
       <div className="contact-layout">
@@ -44,12 +42,24 @@ const Contact = ({ personal }) => {
             <div className="info-item">
               <Mail className="info-icon" />
               <div className="info-details">
-                <span className="info-label">Email Me</span>
+                <span className="info-label">Email</span>
                 <a href={`mailto:${personal.email}`} className="info-value">
                   {personal.email}
                 </a>
               </div>
             </div>
+
+            {personal.phone && (
+              <div className="info-item">
+                <Phone className="info-icon" />
+                <div className="info-details">
+                  <span className="info-label">Phone</span>
+                  <a href={`tel:${personal.phone.replace(/\s+/g, '')}`} className="info-value">
+                    {personal.phone}
+                  </a>
+                </div>
+              </div>
+            )}
 
             <div className="info-item">
               <MapPin className="info-icon" />
@@ -58,6 +68,18 @@ const Contact = ({ personal }) => {
                 <span className="info-value">{personal.location}</span>
               </div>
             </div>
+
+            {personal.website && (
+              <div className="info-item">
+                <Globe className="info-icon" />
+                <div className="info-details">
+                  <span className="info-label">Portfolio Site</span>
+                  <a href={personal.website} target="_blank" rel="noopener noreferrer" className="info-value">
+                    addwin.vercel.app
+                  </a>
+                </div>
+              </div>
+            )}
 
             <div className="info-item">
               <Linkedin className="info-icon" />
@@ -127,7 +149,7 @@ const Contact = ({ personal }) => {
                     name="subject" 
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="Project Collaboration" 
+                    placeholder="Internship / Project Opportunity" 
                   />
                 </div>
 
@@ -139,7 +161,7 @@ const Contact = ({ personal }) => {
                     value={formData.message}
                     onChange={handleChange}
                     rows="5" 
-                    placeholder="Hi Addwin, I'd like to talk about..." 
+                    placeholder="Hi Addwin, I'd like to connect about..." 
                     required
                   ></textarea>
                 </div>

@@ -137,15 +137,15 @@ a:hover {
 
 /* Common Layout Elements */
 .section {
-  padding: 100px 20px 60px 20px;
+  padding: 60px 20px 30px 20px;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
 
 .section-title {
-  font-size: 2.5rem;
-  margin-bottom: 50px;
+  font-size: 2.3rem;
+  margin-bottom: 30px;
   position: relative;
   display: inline-block;
   background: var(--primary-gradient);
@@ -157,8 +157,8 @@ a:hover {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -8px;
-  width: 60px;
+  bottom: -6px;
+  width: 50px;
   height: 4px;
   background: var(--primary-gradient);
   border-radius: 2px;

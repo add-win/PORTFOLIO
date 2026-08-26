@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Server, Database, Settings } from 'lucide-react';
+import { Code2, Server, Database, Cpu, Wrench, Cloud } from 'lucide-react';
 import './Skills.css';
 
 const Skills = ({ skills }) => {
@@ -7,34 +7,46 @@ const Skills = ({ skills }) => {
     {
       title: "Programming Languages",
       icon: <Code2 className="skill-cat-icon" />,
-      items: skills.languages,
-      description: "Languages used for core algorithms, scripting, and backend code."
+      items: skills.languages || [],
+      description: "Core programming languages for web apps, algorithms, and AI models."
     },
     {
-      title: "Web Technologies",
+      title: "Web Development",
       icon: <Server className="skill-cat-icon" />,
-      items: skills.web,
-      description: "Libraries and protocols utilized to build reactive frontends and web APIs."
+      items: skills.web || [],
+      description: "Frontend and backend frameworks for reactive interfaces and RESTful APIs."
     },
     {
-      title: "Databases",
+      title: "Databases & Backend",
       icon: <Database className="skill-cat-icon" />,
-      items: skills.databases,
-      description: "Relational and non-relational database management systems."
+      items: skills.databases || [],
+      description: "Relational and document database management systems."
     },
     {
-      title: "Tools & Platforms",
-      icon: <Settings className="skill-cat-icon" />,
-      items: skills.tools,
-      description: "Development environments, hosting, APIs, and configuration tools."
+      title: "Machine Learning & AI",
+      icon: <Cpu className="skill-cat-icon" />,
+      items: skills.ml_ai || [],
+      description: "Deep learning architectures, neural networks, and NLP processing."
+    },
+    {
+      title: "DevOps & Tools",
+      icon: <Wrench className="skill-cat-icon" />,
+      items: skills.devops_tools || [],
+      description: "Version control, IDEs, API testing, and design tools."
+    },
+    {
+      title: "Cloud & Platforms",
+      icon: <Cloud className="skill-cat-icon" />,
+      items: skills.cloud_platforms || [],
+      description: "Cloud inference engines, real-time messaging, and PWA services."
     }
   ];
 
   return (
     <section id="skills" className="skills-section section">
-      <h2 className="section-title">My Skills</h2>
+      <h2 className="section-title">Technical Skills</h2>
       <p className="skills-subtitle">
-        A summary of programming languages, web standards, and developer tools in my tech stack.
+        Comprehensive technology stack spanning full-stack development, artificial intelligence, and software tools.
       </p>
 
       <div className="skills-grid">

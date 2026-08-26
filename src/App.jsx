@@ -3,6 +3,7 @@ import { portfolioData } from './data/portfolioData';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Achievements from './components/Achievements';
@@ -11,7 +12,6 @@ import { ArrowUp } from 'lucide-react';
 
 function App() {
   const [theme, setTheme] = useState(() => {
-    // Check local storage or prefers-color-scheme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) return savedTheme;
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -55,9 +55,10 @@ function App() {
     <>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       
-      <main style={{ marginTop: '80px' }}>
+      <main style={{ marginTop: '70px' }}>
         <Hero personal={portfolioData.personal} />
         <About education={portfolioData.education} />
+        <Experience experience={portfolioData.experience} />
         <Skills skills={portfolioData.skills} />
         <Projects projects={portfolioData.projects} />
         <Achievements achievements={portfolioData.achievements} certifications={portfolioData.certifications} />
@@ -66,10 +67,10 @@ function App() {
 
       {/* Footer */}
       <footer style={{
-        padding: '40px 20px',
+        padding: '30px 20px',
         textAlign: 'center',
         borderTop: '1px solid var(--border-color)',
-        marginTop: '60px',
+        marginTop: '30px',
         backgroundColor: 'var(--bg-secondary)',
         color: 'var(--text-secondary)'
       }}>
@@ -81,7 +82,7 @@ function App() {
             © {new Date().getFullYear()} Addwin Alanolikkal. All rights reserved.
           </p>
           <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-            Built with React, Vite, and Custom Vanilla CSS.
+            Full-Stack & AI Engineer | Thrissur, Kerala, India
           </p>
         </div>
       </footer>

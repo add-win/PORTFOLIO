@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Code, ArrowRight, Download } from 'lucide-react';
+import { Mail, Code, ArrowRight, Download, Sparkles, CheckCircle2 } from 'lucide-react';
 import { Github, Linkedin } from './BrandIcons';
 import './Hero.css';
 
@@ -7,20 +7,27 @@ const Hero = ({ personal }) => {
   return (
     <section id="home" className="hero-section section">
       <div className="hero-grid">
+        {/* Left Column: Bio & Call-to-actions */}
         <div className="hero-content animate-fade-in">
-          <span className="hero-tagline">Open to Internships & Roles</span>
+          <div className="hero-badge">
+            <span className="pulse-dot"></span>
+            <span>Open for Internships & Projects</span>
+          </div>
+
           <h1 className="hero-title">
             Hi, I'm <span className="gradient-text">{personal.name}</span>
           </h1>
+
           <h2 className="hero-subtitle">{personal.title}</h2>
+
           <p className="hero-desc">{personal.summary}</p>
-          
+
           <div className="hero-actions">
             <a href="#projects" className="btn btn-primary">
               View Work <ArrowRight size={18} />
             </a>
-            <a 
-              href="/Addwin_Alanolikkal_resume_June2026.pdf" 
+            <a
+              href="/Addwin_Alanolikkal_resume.pdf"
               download="Addwin_Alanolikkal_resume.pdf"
               className="btn btn-secondary"
             >
@@ -30,51 +37,49 @@ const Hero = ({ personal }) => {
 
           <div className="hero-socials">
             <a href={personal.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <Github size={22} />
+              <Github size={20} />
             </a>
             <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <Linkedin size={22} />
+              <Linkedin size={20} />
             </a>
             <a href={`mailto:${personal.email}`} aria-label="Email">
-              <Mail size={22} />
+              <Mail size={20} />
             </a>
             <a href={personal.leetcode} target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
-              <Code size={22} />
+              <Code size={20} />
             </a>
           </div>
         </div>
 
-        <div className="hero-visual animate-float">
-          <div className="code-card glass-card">
-            <div className="code-header">
-              <div className="dot red"></div>
-              <div className="dot yellow"></div>
-              <div className="dot green"></div>
-              <span className="code-title">portfolio.py</span>
-            </div>
-            <div className="code-body">
-              <pre>
-                <code>
-<span className="keyword">class</span> <span className="class-name">Developer</span>:
-    <span className="keyword">def</span> <span className="method">__init__</span>(<span className="variable">self</span>):
-        <span className="variable">self</span>.name = <span className="string">"Addwin Alanolikkal"</span>
-        <span className="variable">self</span>.role = <span className="string">"Full Stack / AI & ML"</span>
-        <span className="variable">self</span>.college = <span className="string">"CCE, Irinjalakuda"</span>
-        <span className="variable">self</span>.skills = [
-            <span className="string">"React"</span>, <span className="string">"Node.js"</span>, 
-            <span className="string">"Python"</span>, <span className="string">"Firebase"</span>
-        ]
+        {/* Right Column: Prominent Circular Photo Frame */}
+        <div className="hero-visual-column">
+          <div className="profile-frame-wrapper animate-float">
+            <div className="glowing-gradient-ring"></div>
 
-    <span className="keyword">def</span> <span className="method">get_status</span>(<span className="variable">self</span>):
-        <span className="keyword">return</span> <span className="string">"Always learning, building APIs"</span>
-
-<span className="variable">addwin</span> = Developer()
-<span className="builtin">print</span>(addwin.get_status())
-                </code>
-              </pre>
+            <div className="circular-photo-frame">
+              <img
+                src="/profile.jpeg"
+                alt="Addwin Alanolikkal Profile Photo"
+                className="profile-photo"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextElementSibling.style.display = 'flex';
+                }}
+              />
+              <div className="profile-photo-fallback" style={{ display: 'none' }}>
+                <span>AA</span>
+              </div>
             </div>
-            <div className="code-footer">
-              <span className="comment"># Output: Always learning, building APIs</span>
+
+            {/* Floating Badges around the frame */}
+            <div className="floating-badge badge-top-right glass-card">
+              <Sparkles size={16} className="badge-icon glow-gold" />
+              <span>Full-Stack & AI</span>
+            </div>
+
+            <div className="floating-badge badge-bottom-left glass-card">
+              <CheckCircle2 size={16} className="badge-icon glow-green" />
+              <span>B.Tech CSE</span>
             </div>
           </div>
         </div>

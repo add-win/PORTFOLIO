@@ -1,7 +1,7 @@
 .projects-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   max-width: 700px;
 }
 
@@ -10,7 +10,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .filter-tab {
@@ -43,7 +43,7 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 20px;
 }
 
 .project-card {

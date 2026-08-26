@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, MapPin, Award, Calendar, BookOpen } from 'lucide-react';
+import { GraduationCap, MapPin, Award, Calendar, BookOpen, User } from 'lucide-react';
 import './About.css';
 
 const About = ({ education }) => {
@@ -10,11 +10,10 @@ const About = ({ education }) => {
       <div className="about-layout">
         <div className="about-text-container">
           <p className="about-intro">
-            I am a passionate <strong>Computer Science & Engineering student</strong> at Christ College of Engineering. 
-            I love exploring the intersection of web development, user experience, and artificial intelligence.
+            I am a passionate <strong>Full-Stack & AI/ML Developer</strong> pursuing my B.Tech in Computer Science & Engineering at Christ College of Engineering, Irinjalakuda.
           </p>
           <p className="about-details">
-            Over the course of my B.Tech studies, I have gained hands-on experience in full-stack JavaScript (React, Node.js) and machine learning workflows in Python. I enjoy coding solutions that have a real-world impact—whether it's predicting wildlife intrusions or optimizing health caregiver workloads.
+            Proficient in Python, React, Node.js, FastAPI, MySQL, and MongoDB with a solid foundation in machine learning architectures (DenseNet, ResNet) and modern web technologies. Hackathon winner with proven teamwork, research presentation, and real-world project development experience.
           </p>
 
           <div className="about-stats-grid">
@@ -29,8 +28,8 @@ const About = ({ education }) => {
             <div className="stat-card glass-card">
               <Award className="stat-icon" />
               <div className="stat-info">
-                <span className="stat-label">Chess Title</span>
-                <span className="stat-value">College Champion</span>
+                <span className="stat-label">Hackathon</span>
+                <span className="stat-value">AstraX 1st Prize</span>
               </div>
             </div>
 
