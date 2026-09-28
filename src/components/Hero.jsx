@@ -28,7 +28,7 @@ const Hero = ({ personal }) => {
             </a>
             <a
               href="/Addwin_Alanolikkal_resume.pdf"
-              download="Addwin_Alanolikkal_resume.pdf"
+              download="Addwin_Alanolikkal_resume_oct.pdf"
               className="btn btn-secondary"
             >
               Resume <Download size={18} />
