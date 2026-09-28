@@ -6,7 +6,7 @@ const About = ({ education }) => {
   return (
     <section id="about" className="about-section section">
       <h2 className="section-title">About Me</h2>
-      
+
       <div className="about-layout">
         <div className="about-text-container">
           <p className="about-intro">
@@ -21,10 +21,10 @@ const About = ({ education }) => {
               <BookOpen className="stat-icon" />
               <div className="stat-info">
                 <span className="stat-label">CGPA</span>
-                <span className="stat-value">8.82 / 10</span>
+                <span className="stat-value">8.86 / 10</span>
               </div>
             </div>
-            
+
             <div className="stat-card glass-card">
               <Award className="stat-icon" />
               <div className="stat-info">
