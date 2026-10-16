@@ -9,7 +9,7 @@ export const portfolioData = {
     github: "https://github.com/add-win",
     leetcode: "https://leetcode.com/u/Addwin_Alanolikkal/",
     location: "Vasupuram, Thrissur, Kerala, India",
-    summary: "Fourth-year B.Tech CSE student at Christ College of Engineering with expertise in Full-Stack Web Development and a strong interest in Artificial Intelligence and Machine Learning. Proficient in Python, React, HTML, CSS, JavaScript, Node.js, MySQL, and MongoDB with a solid foundation in machine learning and modern web technologies. Hackathon winner with proven teamwork and software development skills."
+    summary: "Final-year B.Tech CSE student at Christ College of Engineering with a strong interest in Full-Stack Development and AI/ML. Experienced in building web applications using React, Node.js, FastAPI, MySQL, and MongoDB, with expertise in Python, deep learning, and NLP. Developed a hybrid animal detection system and secured 1st prize at the AstraX 42-hour hackathon for Quick-Care. Gaining practical application development experience through an Infosys Springboard internship, demonstrating strong problem-solving, teamwork, and a passion for developing innovative, real-world solutions."
   },
   education: [
     {
