@@ -63,13 +63,16 @@ const Navbar = ({ theme, toggleTheme }) => {
         </div>
       </div>
 
-      {/* Mobile Drawer menu */}
-      <div className={`mobile-drawer ${isMobileMenuOpen ? 'open' : ''}`}>
+      {/* Mobile Drawer menu — rendered as sibling outside nav flow via inline top offset */}
+      <div
+        className={`mobile-drawer ${isMobileMenuOpen ? 'open' : ''}`}
+        style={{ top: isScrolled ? '56px' : '64px' }}
+      >
         <div className="drawer-links">
           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
+            <a
+              key={link.name}
+              href={link.href}
               className="drawer-link"
               onClick={() => setIsMobileMenuOpen(false)}
             >

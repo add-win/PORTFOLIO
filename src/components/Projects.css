@@ -175,3 +175,33 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 576px) {
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .filter-tabs {
+    gap: 8px;
+  }
+
+  .filter-tab {
+    padding: 6px 14px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .project-title {
+    font-size: 1.15rem;
+  }
+
+  .project-desc {
+    font-size: 0.92rem;
+  }
+
+  .project-link-btn {
+    font-size: 0.82rem;
+    padding: 7px 12px;
+  }
+}

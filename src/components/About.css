@@ -159,4 +159,34 @@
   .about-stats-grid {
     grid-template-columns: 1fr;
   }
+
+  .about-intro {
+    font-size: 1.1rem;
+  }
+
+  .timeline-title {
+    font-size: 1.5rem;
+  }
+
+  .edu-degree {
+    font-size: 1.1rem;
+  }
+
+  .timeline-content {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat-card {
+    padding: 15px 10px;
+  }
+
+  .stat-value {
+    font-size: 0.9rem;
+  }
 }

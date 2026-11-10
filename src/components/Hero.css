@@ -298,3 +298,85 @@
     left: -10px;
   }
 }
+
+/* Small tablets / large phones */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero-desc {
+    font-size: 0.98rem;
+  }
+
+  .profile-frame-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+
+  .floating-badge {
+    font-size: 0.78rem;
+    padding: 8px 12px;
+    gap: 6px;
+  }
+
+  .badge-top-right {
+    right: 0px;
+    top: 5px;
+  }
+
+  .badge-bottom-left {
+    left: 0px;
+    bottom: 10px;
+  }
+}
+
+/* Small phones (375px and below) */
+@media (max-width: 420px) {
+  .hero-section {
+    padding: 20px 16px 16px 16px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .hero-desc {
+    font-size: 0.93rem;
+  }
+
+  .hero-badge {
+    font-size: 0.78rem;
+    padding: 5px 12px;
+  }
+
+  .profile-frame-wrapper {
+    width: 190px;
+    height: 190px;
+  }
+
+  /* Hide floating badges on very small screens to avoid overflow */
+  .floating-badge {
+    display: none;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

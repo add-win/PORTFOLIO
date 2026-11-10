@@ -129,17 +129,18 @@
   height: 0;
   background-color: var(--bg-secondary);
   overflow: hidden;
-  transition: height 0.3s ease;
+  transition: height 0.3s ease, top 0.3s ease;
   box-shadow: var(--shadow-md);
   border-bottom: 1px solid var(--border-color);
+  z-index: 999;
 }
 
-.navbar.scrolled + .mobile-drawer {
-  top: 70px;
-}
-
+/* Drawer top position is managed via inline style in Navbar.jsx based on scroll state */
 .mobile-drawer.open {
-  height: 280px;
+  height: auto;
+  min-height: 100px;
+  max-height: 350px;
+  overflow-y: auto;
 }
 
 .drawer-links {
@@ -172,11 +173,51 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .desktop-only {
     display: none;
   }
   .mobile-only {
     display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 64px;
+  }
+
+  .navbar.scrolled {
+    height: 56px;
+  }
+
+  .nav-logo {
+    font-size: 1.3rem;
+  }
+
+  /* Mobile drawer defaults to top set by inline style from Navbar.jsx */
+  .mobile-drawer {
+    top: 64px;
+  }
+
+  /* Allow drawer to grow naturally with content instead of hardcoded height */
+  .mobile-drawer.open {
+    height: auto;
+    max-height: 320px;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-container {
+    padding: 0 14px;
+  }
+
+  .nav-logo {
+    font-size: 1.15rem;
+  }
+
+  .drawer-link {
+    font-size: 1.1rem;
   }
 }

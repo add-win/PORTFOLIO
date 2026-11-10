@@ -117,3 +117,37 @@
     gap: 40px;
   }
 }
+
+@media (max-width: 576px) {
+  .ach-title {
+    font-size: 1rem;
+  }
+
+  .ach-desc {
+    font-size: 0.88rem;
+  }
+
+  .cert-title {
+    font-size: 0.95rem;
+  }
+
+  .achievement-card, .certification-card {
+    gap: 14px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .column-title {
+    font-size: 1.3rem;
+  }
+
+  .ach-icon-wrapper {
+    padding: 10px;
+  }
+
+  .ach-icon {
+    width: 20px;
+    height: 20px;
+  }
+}

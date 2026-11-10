@@ -73,6 +73,11 @@ html {
   scroll-padding-top: 80px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-primary);
@@ -256,6 +261,44 @@ a:hover {
   }
   .section {
     padding-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+
+  .section {
+    padding: 70px 16px 24px 16px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .glass-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  .section {
+    padding: 60px 14px 20px 14px;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .glass-card {
+    padding: 18px;
+    border-radius: 12px;
   }
 }
 
