@@ -16,7 +16,7 @@ export const portfolioData = {
       degree: "B.Tech in Computer Science & Engineering",
       institution: "Christ College of Engineering, Irinjalakuda",
       duration: "2023 - 2027",
-      details: "CGPA: 8.82/10 (up to S6). Active BeachHack Decoration Team Member."
+      details: "CGPA: 8.86/10 (up to S6). Active BeachHack Decoration Team Member."
     },
     {
       degree: "12th Standard - Kerala State Board (Computer Science)",
@@ -155,16 +155,16 @@ export const portfolioData = {
   },
   achievements: [
     {
-      title: "1st Prize - AstraX 42-hour Hackathon",
-      detail: "Won 1st prize in the Software Track of AstraX 42-hour Hackathon at RSET, Kakkanad (March 2026)."
+      title: "Hospital Cancer Project Development",
+      detail: "Currently involved in the development of a real-world hospital-based Cancer healthcare project."
     },
     {
       title: "International Conference Paper Presentation",
       detail: "Presented paper at the International Conference CHORDS 2026 at IIIT, Kottayam (Jul 2026)."
     },
     {
-      title: "Hospital Cancer Project Development",
-      detail: "Currently involved in the development of a real-world hospital-based Cancer healthcare project."
+      title: "1st Prize - AstraX 42-hour Hackathon",
+      detail: "Won 1st prize in the Software Track of AstraX 42-hour Hackathon at RSET, Kakkanad (March 2026)."
     },
     {
       title: "School Election Application",
@@ -185,7 +185,7 @@ export const portfolioData = {
       issuer: "IBM"
     },
     {
-      title: "Infosys Springboard Certification on Introduction to AI, Data Science, Deep Learning, NLP, RPA, & Computer Vision",
+      title: "Infosys Springboard Certification on Introduction to AI, Data Science, Deep Learning, NLP, & Computer Vision",
       issuer: "Infosys Springboard"
     },
     {
